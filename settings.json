@@ -1,0 +1,13 @@
+{
+  "cleanupPeriodDays": 7,
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "theme": "auto",
+  "remoteControlAtStartup": false
+}
