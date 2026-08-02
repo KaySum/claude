@@ -1,0 +1,9 @@
+# Ignore everything by default — this directory is full of machine-local state
+# (sessions, caches, history, plugins, etc.).
+*
+
+# Whitelist the config files we actually track.
+!.gitignore
+!CLAUDE.md
+!settings.json
+!README.md
