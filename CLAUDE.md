@@ -2,11 +2,14 @@
 
 ## Code Style
 
-- Code should always be as clean and readable as possible, it should never rely on excessive commenting to be understandable
-- Comments should be 2 lines maximum (but try to avoid comments or use 1 line whenever possible) unless explicitly stated otherwise
-- Prefer guard clauses over nested if-statements unless it makes the code less readable
+- Code should always be as clean, readable, and robust as possible
+- Prefer short simple code: if you write 200 lines and it could be 50, rewrite it
+- Prefer guard clauses over nested if-statements unless it makes the code less readable or more complex
 - Always write code that matches the style and conventions of the existing code in the project
+- Avoid writing comments at all costs, the code should be readable without reliance on comments to understand it
+- Comments should only be used to explain why something was done if it is not obvious and should be at most 2 lines
 - Always follow best practices of the language/framework/library being used
+- Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
 ## Git Rules
 
