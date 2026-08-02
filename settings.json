@@ -1,7 +1,8 @@
 {
   "cleanupPeriodDays": 7,
   "env": {
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
+    "EDITOR": "nvim"
   },
   "model": "opus",
   "enabledPlugins": {
