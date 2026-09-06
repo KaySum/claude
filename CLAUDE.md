@@ -17,3 +17,4 @@
 ## System Usage
 
 - Minimize temporary-file writes (SSD wear). Avoid state-changing system commands unless explicitly asked.
+- Never install or reconfigure anything system-wide without my explicit permission, granted per command.
