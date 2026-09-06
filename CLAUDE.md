@@ -11,7 +11,7 @@
 
 ## Git Rules
 
-- Never run `git add/commit/push/reset/rebase` without my explicit permission. Read-only git commands are fine.
+- Never run anything that changes git state — index, working tree, refs, or history, directly or indirectly — without my explicit permission. Read-only git (`status`, `log`, `diff`, `show`) is always fine.
 - Permission covers one command, one time. It never carries over — not to a later run of the same command, not to other git commands, not for the rest of the session. If I say "commit this", commit that once, then ask again before the next commit, push, or anything else.
 
 ## System Usage
