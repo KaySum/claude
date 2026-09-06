@@ -6,6 +6,7 @@
     "EDITOR": "nvim"
   },
   "model": "opus",
+  "enableArtifact": false,
   "enabledPlugins": {
     "pyright-lsp@claude-plugins-official": true,
     "clangd-lsp@claude-plugins-official": true
