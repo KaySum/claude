@@ -1,40 +1,38 @@
-# Claude Code Configuration
+# claude
 
-Personal configuration for
-[Claude Code](https://claude.com/claude-code), living in `~/.claude`.
+Personal configuration for [Claude Code](https://claude.com/claude-code), living
+in `~/.claude`.
 
 ## Install
 
-These files belong in your `~/.claude` directory. Pick one of the approaches
-below.
+1. Point `~/.claude` at the repo. It can't be cloned over, since the directory
+   also holds machine-local state (sessions, caches, history):
 
-### Symlink (recommended)
+   ```sh
+   cd ~/.claude && git init -q && git remote add origin https://github.com/KaySum/claude.git && git fetch -q origin
+   ```
 
-Clone anywhere and symlink the files, so `git pull` keeps your config up to date:
+2. Back up whatever the repo is about to overwrite. The list comes from the repo
+   itself, so it stays right as the config grows:
 
-```sh
-git clone https://github.com/KaySum/claude-config.git ~/claude-config
-ln -sf ~/claude-config/CLAUDE.md ~/.claude/CLAUDE.md
-ln -sf ~/claude-config/settings.json ~/.claude/settings.json
-```
+   ```sh
+   git ls-tree -r --name-only origin/main | while IFS= read -r f; do [ -e "$f" ] && printf '%s\n' "$f"; done | tar -czf ~/claude-backup.tgz -T -
+   ```
 
-### Copy
+3. Check out the config on top of yours:
 
-Or just copy the files in:
+   ```sh
+   git checkout -f main
+   ```
 
-```sh
-git clone https://github.com/KaySum/claude-config.git
-cp claude-config/CLAUDE.md claude-config/settings.json ~/.claude/
-```
+4. Remove the `.git` folder, so you can add it to your own repo later
 
-> **Note:** `~/.claude` also holds machine-local state (sessions, caches,
-> history). Back up any existing `CLAUDE.md` and `settings.json` before
-> overwriting them.
+   ```sh
+   rm -rf ~/.claude/.git
+   ```
 
-## Update
+5. Start Claude Code!
 
-```sh
-cd ~/claude-config && git pull
-```
-
-If you copied the files instead of symlinking, re-run the copy step after pulling.
+   ```sh
+   claude
+   ```
