@@ -1,0 +1,21 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "$docs": "https://code.claude.com/docs/en/keybindings",
+  "bindings": [
+    {
+      "context": "Transcript",
+      "bindings": {
+        "alt+d": "scroll:halfPageDown",
+        "alt+u": "scroll:halfPageUp"
+      }
+    },
+    {
+      "context": "Scroll",
+      "bindings": {
+        "ctrl+d": "scroll:halfPageDown",
+        "alt+d": "scroll:halfPageDown",
+        "alt+u": "scroll:halfPageUp"
+      }
+    }
+  ]
+}
