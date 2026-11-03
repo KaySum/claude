@@ -1,11 +1,18 @@
-# Ignore everything by default — this directory is full of machine-local state
-# (sessions, caches, history, plugins, etc.).
+# ~/.claude is mostly machine-local state (sessions, caches, history, plugins),
+# so ignore everything and whitelist only the config worth versioning.
 *
 
-# Whitelist the config files we actually track.
-!.gitignore
-!CLAUDE.md
-!settings.json
-!README.md
-!skills/
-!skills/**
+!/.gitignore
+!/.markdownlint.jsonc
+!/CLAUDE.md
+!/README.md
+!/keybindings.json
+!/settings.json
+
+# Own skills. Anything else under skills/ is managed by Claude Code itself.
+!/skills/
+!/skills/**
+/skills/synced/
+/skills/.trash/
+
+.DS_Store
